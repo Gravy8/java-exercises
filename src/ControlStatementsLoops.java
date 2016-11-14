@@ -4,11 +4,16 @@ public class ControlStatementsLoops {
         //whileExercise();
         //doWhileExercise();
         //forExercise();
-        String keepGoing = "y";
-        while(keepGoing.equals("y")){
+        String keepGoing;
+        /*do{
             keepGoing = fizzbuzz();
-        }
+        } while(keepGoing.equals("y"));*/
+        do{
+            keepGoing = grades();
+        } while(keepGoing.equals("y"));
     }
+
+
     public static void whileExercise(){
         int i = 5;
         while (i <= 15){
@@ -16,6 +21,7 @@ public class ControlStatementsLoops {
             i++;
         }
     }
+
     public static void doWhileExercise(){
         long i = 2;
         do {
@@ -23,6 +29,7 @@ public class ControlStatementsLoops {
             i *= i;
         }while(i < 1000000);
     }
+
     public static void forExercise(){
         for(int i = 5; i<= 15; i++){
             System.out.println(i);
@@ -31,6 +38,7 @@ public class ControlStatementsLoops {
             System.out.println(j);
         }
     }
+
     public static String fizzbuzz(){
         String keepGoing;
         for(int i = 1; i <= 100; i++){
@@ -53,6 +61,30 @@ public class ControlStatementsLoops {
             System.out.println(i + " cubed is " + (i * i * i));
         }
         System.out.print("Do you want to continue?(y/n): ");
+        keepGoing = sc.next();
+        return keepGoing;
+    }
+
+    public static String grades(){
+        int userGrade;
+        String keepGoing;
+        char letterGrade;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your grade: ");
+        userGrade = sc.nextInt();
+        if (userGrade >= 0 && userGrade < 61){
+            letterGrade = 'F';
+        } else if (userGrade < 67){
+            letterGrade = 'D';
+        } else if (userGrade < 80){
+            letterGrade = 'C';
+        } else if (userGrade < 88){
+            letterGrade = 'B';
+        } else{
+            letterGrade = 'A';
+        }
+        System.out.println("Your letter grade is " + letterGrade);
+        System.out.print("Do you want to enter another grade?(y/n): ");
         keepGoing = sc.next();
         return keepGoing;
     }

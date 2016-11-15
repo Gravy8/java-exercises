@@ -54,7 +54,7 @@ public class Methods {
 
     public static long recurFactorialAnswer(int userEntry, long answer){
         if (userEntry > 1){
-            answer = (answer * userEntry) +'L';
+            answer = answer * userEntry;
             return recurFactorialAnswer(userEntry - 1, answer);
         } else{
             return answer;

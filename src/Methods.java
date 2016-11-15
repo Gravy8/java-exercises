@@ -33,7 +33,7 @@ public class Methods {
 
     public static void factorial(){
         int userEntry;
-        long answer = 1;
+        long answer = 1L;
         String factorialString;
         userEntry = promptForNumber();
         factorialString = userEntry + "! = " + userEntry;           //second userEntry needs replaced with "1" for for loop and big recursive
@@ -54,7 +54,7 @@ public class Methods {
 
     public static long recurFactorialAnswer(int userEntry, long answer){
         if (userEntry > 1){
-            answer = answer * userEntry;
+            answer = (answer * userEntry) +'L';
             return recurFactorialAnswer(userEntry - 1, answer);
         } else{
             return answer;
@@ -85,9 +85,9 @@ public class Methods {
     public static int promptForNumber(){
         int userEntry;
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a number 1-39: ");
+        System.out.print("Enter a number 1-20: ");
         userEntry = sc.nextInt();
-        if (userEntry >=1 && userEntry <= 39){
+        if (userEntry >=1 && userEntry <= 20){
             return userEntry;
         }
         return promptForNumber();

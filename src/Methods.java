@@ -36,17 +36,17 @@ public class Methods {
         long answer = 1;
         String factorialString;
         userEntry = promptForNumber();
-        factorialString = userEntry + "! = " + userEntry;
-        /*for(int i = 2; i <= userEntry; i++){
+        factorialString = userEntry + "! = " + userEntry;           //second userEntry needs replaced with "1" for for loop and big recursive
+        /*for(int i = 2; i <= userEntry; i++){      //for loop method
             answer = answer * i;
             factorialString = factorialString + " x " + i;
         }*/
-        //System.out.println(factorialString + " = " + answer);
-        /*int i = 2;
-        System.out.println(recursiveFactorial(answer, factorialString, userEntry, i));*/
-        answer = recurFactorialAnswer(userEntry, answer);
-        factorialString = recurFactorialString(userEntry - 1, factorialString) + " x 1";
-        System.out.println(factorialString + " = " + answer);
+        //System.out.println(factorialString + " = " + answer); //for loop method
+        /*int i = 2;        //big recursive method
+        System.out.println(recursiveFactorial(answer, factorialString, userEntry, i));*/        //big recursive method
+        answer = recurFactorialAnswer(userEntry, answer);       //broken up recursive method
+        factorialString = recurFactorialString(userEntry - 1, factorialString) + " x 1";        //broken up recursive method
+        System.out.println(factorialString + " = " + answer);       // broken up recursive method
         if(keepGoing().equalsIgnoreCase("y")){
             factorial();
         }

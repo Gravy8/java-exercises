@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.InputMismatchException;
 public class ArraysExercise {
     public static void main(String[] args) {
-       /* String[] arrayOfAdjectives = {"Alarmed", "Alert", "Ample", "Breakable", "Bumpy", "Biodegradable", "Bountiful",
+        String[] arrayOfAdjectives = {"Alarmed", "Alert", "Ample", "Breakable", "Bumpy", "Biodegradable", "Bountiful",
         "Candid", "Chubby", "Crushing", "Cooked", "Dapper", "Downright", "Dry", "Delectable", "Deadly", "Enchanting",
         "Metal", "Massive", "Disrespectful", "Sexy", "Hot", "Bearded", "Duck-like", "Insanely Creepy", "Naked", "Shaky", "Sick",
         "Fluffy", "Unholy", "Filthy", "Fighting", "Frisky", "Hideous", "Abusive", "Drunken", "Useless", "High-End", "Costumed",
@@ -13,7 +13,7 @@ public class ArraysExercise {
         "Mad Cow Disease", "Kitty Cat", "Hairy Legs", "Mad-Dog Skullcap", "Keepsake Machete", "Dog Poop", "Mental Disorder", "Sweet Tailpipe"};
         String adjective = getRandom(arrayOfAdjectives);
         String noun = getRandom(arrayOfNouns);
-        System.out.println("Your new server name is: " + adjective + " " + noun);*/
+        System.out.println("Your new server name is: " + adjective + " " + noun);
 
         boolean keepGoing = true;
         Scanner sc = new Scanner(System.in);
@@ -95,7 +95,7 @@ public class ArraysExercise {
                     System.out.println("Please enter a valid character");
                     continue;
                 }
-                return (keepGoing.equalsIgnoreCase("y")) ? true : false;
+                return keepGoing.equalsIgnoreCase("y");
             } catch (InputMismatchException e) {
                 sc.next();
                 System.out.println("Please enter a valid character");

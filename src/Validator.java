@@ -10,6 +10,7 @@ public class Validator {
                 userInput = sc.nextInt();
                 return userInput;
             } catch (InputMismatchException e) {
+                sc.next();
                 System.out.println("Enter an integer");
             }
         }

@@ -1,4 +1,3 @@
-import java.util.Scanner;
 import java.util.ArrayList;
 public class StudentScoreApp {
     public static void main(String[] args) {
@@ -13,7 +12,13 @@ public class StudentScoreApp {
 
             keepGoing = KeepGoing.check("Do you want to enter another student? (y/n): ");
         }
-        System.out.println(students.get(0).firstName);
+
+        students.sort((a, b) -> a.compareTo(b));
+        for(Student student : students){
+            System.out.println(student.firstName + " " + student.lastName + " Score: " + student.score);
+        }
+
+
     }
 
     private static Student getStudentInfo(){

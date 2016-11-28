@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.InputMismatchException;
 public class Validator {
-    public int getInt(String prompt){
+    public static int getInt(String prompt){
         Scanner sc = new Scanner(System.in);
         int userInput;
         while(true) {
@@ -15,7 +15,7 @@ public class Validator {
         }
     }
 
-    public int getIntWithinRange(String prompt, int min, int max){
+    public static int getIntWithinRange(String prompt, int min, int max){
         while(true){
             int userInput = getInt(prompt);
 
@@ -30,7 +30,7 @@ public class Validator {
         }
     }
 
-    public String getString(String prompt){
+    public static String getString(String prompt){
         Scanner sc = new Scanner(System.in);
         String userInput;
         while(true) {
@@ -44,7 +44,7 @@ public class Validator {
         }
     }
 
-    public String getStringOnlyLetters(String prompt){
+    public static String getStringOnlyLetters(String prompt){
         Scanner sc = new Scanner(System.in);
         String userInput;
         while(true) {

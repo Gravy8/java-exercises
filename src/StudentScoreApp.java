@@ -1,3 +1,6 @@
+import Validator.Validator;
+import Validator.KeepGoing;
+
 import java.util.ArrayList;
 public class StudentScoreApp {
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package Validator;
+
 import java.util.Scanner;
 import java.util.InputMismatchException;
 public class Validator {
@@ -27,6 +29,52 @@ public class Validator {
                 return userInput;
             } catch (InputMismatchException e){
                 System.out.println("Enter a valid integer");
+            }
+        }
+    }
+
+    public static double getDouble(String prompt){
+        Scanner sc = new Scanner(System.in);
+        double userInput;
+
+        while(true){
+            try{
+                System.out.print(prompt);
+                userInput = sc.nextDouble();
+                return userInput;
+            }catch (InputMismatchException e){
+                sc.next();
+                System.out.println("Enter a number");
+            }
+        }
+    }
+
+    public static double getPositiveDouble(String prompt){
+        while(true){
+            double userInput = getDouble(prompt);
+
+            try{
+                if(userInput < 0){
+                    throw new InputMismatchException();
+                }
+                return userInput;
+            }catch(InputMismatchException e){
+                System.out.println("Enter a valid number");
+            }
+        }
+    }
+
+    public static double getDoubleGreaterThanZero(String prompt){
+        while(true){
+            double userInput = getDouble(prompt);
+
+            try{
+                if(userInput <= 0){
+                    throw new InputMismatchException();
+                }
+                return userInput;
+            }catch(InputMismatchException e){
+                System.out.println("Enter a number greater than zero");
             }
         }
     }
